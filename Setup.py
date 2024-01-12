@@ -14,4 +14,5 @@ setup(
         'pymupdf',
         'matplotlib'
     ],
+    py_requires=["dragonTools"],
 )
