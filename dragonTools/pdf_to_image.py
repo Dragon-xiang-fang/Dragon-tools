@@ -2,10 +2,15 @@ import datetime
 import os
 import fitz  # fitz就是pip install PyMuPDF
 
+'''
+@:param pdfPath是PDF文件的路径
+@:param imagePath是存储图片文件的路径
+@:param clear可以指代清晰度
+'''
 
-def py_PDF_to_Image(pdfPath, imagePath):
+
+def py_PDF_to_Image(pdfPath, imagePath, clear: int = 5):
     startTime_pdf2img = datetime.datetime.now()  # 开始时间
-
     print("imagePath=" + imagePath)
     pdfDoc = fitz.open(pdfPath)
     for pg in range(pdfDoc.page_count):
@@ -13,8 +18,8 @@ def py_PDF_to_Image(pdfPath, imagePath):
         rotate = int(0)
         # 每个尺寸的缩放系数为1.3，这将为我们生成分辨率提高2.6的图像。
         # 此处若是不做设置，默认图片大小为：792X612, dpi=96
-        zoom_x = 5  # (1.33333333-->1056x816)   (2-->1584x1224)
-        zoom_y = 5
+        zoom_x = clear  # (1.33333333-->1056x816)   (2-->1584x1224)
+        zoom_y = clear
         mat = fitz.Matrix(zoom_x, zoom_y).prerotate(rotate)
         pix = page.get_pixmap(matrix=mat, alpha=False)
 

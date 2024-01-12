@@ -1,5 +1,9 @@
 import fitz
 
+'''
+@:param path是文件路径
+'''
+
 
 def get_image(path):
     doc = fitz.open(path)  # open a document
