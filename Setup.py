@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='dragon-tools',
+    name='dragonTools',
     version='0.1',
     packages=find_packages(),
     author='Dragon-xiang-fang',
