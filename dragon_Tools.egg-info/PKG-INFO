@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: dragon-Tools
+Version: 0.1.2
+Summary: A small package od tools
+Home-page: https://github.com/Dragon-xiang-fang/Dragon-tools
+Author: Dragon-xiang-fang
+Author-email: dragonxiangfang@163.com
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: pymupdf
+Requires-Dist: matplotlib
